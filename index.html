@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Refúgio das Palmeiras</title>
+
+    <link rel="stylesheet" href="../home/CSS/style.css">
+    <!-- <link rel="stylesheet" href="contato.css"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+
+        <div class="logo">
+            <img src="img/logo.png" alt="Refúgio das Palmeiras">
+        </div>
+
+        <nav class="menu">
+            <a href="#home">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="acomodacoes.html">Acomodações</a>
+            <a href="#contato">Contato</a>
+            
+
+    
+        </nav>
+
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL --><main>
+
+        
+        <section class="home" id="home">
+
+            <div class="container">
+
+                <div class="slide ativo">
+                </div>
+
+                <div class="slide">
+                </div>
+
+                <div class="slide">
+                </div>
+
+                <div class="slide">
+                </div>
+
+            </div>
+
+        </section>
+
+        
+        <section class="busca-hotel">
+
+            <form class="form-busca">
+
+                <div class="campo">
+                    <icon name="calendar" size="20"></icon>
+                    <input
+                        type="date"
+                        id="checkin"
+                        aria-label="Data de check-in"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <icon name="calendar" size="20"></icon>
+                    <input
+                        type="date"
+                        id="checkout"
+                        aria-label="Data de check-out"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <icon name="users" size="20"></icon>
+
+                    <select id="hospedes" aria-label="Quantidade de hóspedes">
+                        <option value="1">1 hóspede</option>
+                        <option value="2" selected>2 hóspedes</option>
+                        <option value="3">3 hóspedes</option>
+                        <option value="4">4 hóspedes</option>
+                        <option value="5">5 hóspedes</option>
+                        <option value="6">6 ou mais hóspedes</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <icon name="ticket" size="20"></icon>
+                    <input type="text" id="cupom" placeholder="Cupom">
+                </div>
+
+                <a href="../home/acomodacoes.html" class="btn-buscar">
+                    Buscar
+                </a>
+
+            </form>
+
+        </section>
+
+        
+        <section class="sobre" id="sobre">
+
+            <div class="sobre-conteudo">
+
+                <span class="subtitulo">SOBRE O REFÚGIO</span>
+
+                <h1>
+                    Um refúgio para
+                    <span>renovar suas energias</span>
+                </h1>
+
+                <p>
+                    O Refúgio das Palmeiras é o lugar ideal para quem
+                    busca tranquilidade, conforto e momentos especiais
+                    longe da correria do dia a dia.
+                </p>
+
+                <p>
+                    Rodeado pela beleza da natureza, nosso hotel foi
+                    pensado para proporcionar uma experiência única,
+                    unindo ambientes aconchegantes, hospitalidade e
+                    espaços perfeitos para descansar e aproveitar
+                    cada instante.
+                </p>
+
+                <p>
+                    Nossa missão é fazer com que cada hóspede se sinta
+                    em casa, oferecendo uma estadia marcada pelo
+                    bem-estar, pela qualidade e pela atenção aos detalhes.
+                </p>
+
+                <div class="frase">
+                    Refúgio das Palmeiras:
+                    <span>seu descanso, nossa essência.</span>
+                </div>
+
+                <a href="acomodacoes.html" class="btn-conhecer">
+                    Conheça nossas acomodações
+                    <span>→</span>
+                </a>
+
+            </div>
+
+            <div class="sobre-imagem">
+                <img src="img/hotel6.jpg" alt="">
+            </div>
+
+        </section>
+
+        
+        <section class="diferenciais">
+
+            <article class="diferencial">
+                <span class="icone">🌴</span>
+
+                <div>
+                    <h3>Natureza ao redor</h3>
+                    <p>
+                        Mais tranquilidade e bem-estar em todos os momentos.
+                    </p>
+                </div>
+            </article>
+
+            <article class="diferencial">
+                <span class="icone">🛏</span>
+
+                <div>
+                    <h3>Acomodações confortáveis</h3>
+                    <p>
+                        Ambientes acolhedores para você se sentir em casa.
+                    </p>
+                </div>
+            </article>
+
+            <article class="diferencial">
+                <span class="icone">🍽</span>
+
+                <div>
+                    <h3>Gastronomia de qualidade</h3>
+                    <p>
+                        Sabores que tornam sua experiência ainda mais especial.
+                    </p>
+                </div>
+            </article>
+
+            <article class="diferencial">
+                <span class="icone">♡</span>
+
+                <div>
+                    <h3>Atendimento acolhedor</h3>
+                    <p>
+                        Nosso time está sempre pronto para receber você.
+                    </p>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- CONTATO -->
+        <section class="contato" id="contato">
+
+            <div class="contato-cabecalho">
+
+                <span class="subtitulo">REFÚGIO DAS PALMEIRAS</span>
+
+                <h1>Entre em contato</h1>
+
+                <p>
+                    Será um prazer fazer parte da sua próxima experiência.
+                    Entre em contato conosco para tirar dúvidas sobre
+                    reservas, acomodações e nossos serviços.
+                </p>
+
+            </div>
+
+            <div class="contato-conteudo">
+
+                <!-- INFORMAÇÕES CONTATO -->
+                <div class="contato-info">
+
+                    <h2>Fale conosco</h2>
+
+                    <p class="info-descricao">
+                        Estamos à disposição para ajudar você a planejar
+                        uma estadia especial.
+                    </p>
+
+                    <div class="info-item">
+
+                        <div class="info-icone">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+                                19.79 19.79 0 0 1-8.63-3.07
+                                19.5 19.5 0 0 1-6-6
+                                A19.79 19.79 0 0 1 2.12 4.2
+                                2 2 0 0 1 4.11 2h3
+                                a2 2 0 0 1 2 1.72
+                                c.12.96.36 1.9.7 2.8
+                                a2 2 0 0 1-.45 2.11L8.09 9.91
+                                a16 16 0 0 0 6 6l1.27-1.27
+                                a2 2 0 0 1 2.11-.45
+                                c.9.34 1.84.58 2.8.7
+                                a2 2 0 0 1 1.73 2.03Z"/>
+                            </svg>
+                        </div>
+
+                        <div>
+                            <h3>Telefone</h3>
+                            <p>(17) 3000-0000</p>
+                        </div>
+
+                    </div>
+
+                    <div class="info-item">
+
+                        <div class="info-icone">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                <path d="m22 7-10 6L2 7"/>
+                            </svg>
+                        </div>
+
+                        <div>
+                            <h3>E-mail</h3>
+                            <p>contato@refugiodaspalmeiras.com.br</p>
+                        </div>
+
+                    </div>
+
+                    <div class="info-item">
+
+                        <div class="info-icone">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                                <circle cx="12" cy="10" r="2.5"/>
+                            </svg>
+                        </div>
+
+                        <div>
+                            <h3>Endereço</h3>
+                            <p>Estrada das Palmeiras, 100</p>
+                            <p>Interior de São Paulo - SP</p>
+                        </div>
+
+                    </div>
+
+                    <div class="info-item">
+
+                        <div class="info-icone">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9"/>
+                                <path d="M12 7v5l3 2"/>
+                            </svg>
+                        </div>
+
+                        <div>
+                            <h3>Horário de atendimento</h3>
+                            <p>Todos os dias, das 8h às 20h</p>
+                        </div>
+
+                    </div>
+
+                    <div class="contato-frase">
+                        Seu descanso, nossa essência.
+                    </div>
+
+                </div>
+
+                
+                <div class="formulario-container" id="formulario">
+
+                    <h2>Envie uma mensagem</h2>
+
+                    <p class="formulario-descricao">
+                        Preencha os campos abaixo e fale com nossa equipe.
+                    </p>
+
+                    <form id="formContato">
+
+                        <div class="campo">
+                            <label for="nome">Seu nome</label>
+
+                            <input
+                                type="text"
+                                id="nome"
+                                name="nome"
+                                placeholder="Digite seu nome completo"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo">
+                            <label for="email">Seu e-mail</label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="exemplo@email.com"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo">
+                            <label for="assunto">Assunto</label>
+
+                            <select id="assunto" name="assunto" required>
+                                <option value="" disabled selected>
+                                    Selecione um assunto
+                                </option>
+
+                                <option value="Reservas">Reservas</option>
+                                <option value="Acomodações">Acomodações</option>
+                                <option value="Serviços">Serviços</option>
+                                <option value="Outros">Outros assuntos</option>
+                            </select>
+                        </div>
+
+                        <div class="m">
+                            <label for="mensagem">Sua mensagem</label>
+
+                            <textarea
+                                id="mensagem"
+                                name="mensagem"
+                                rows="1"
+                                placeholder="Escreva sua mensagem..."
+                                required
+                            ></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-enviar">
+                            Enviar mensagem
+                            <span>→</span>
+                        </button>
+
+                        <p
+                            id="mensagemSucesso"
+                            class="mensagem-sucesso"
+                            role="status"
+                            aria-live="polite"
+                        ></p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    
+    <footer class="rodape">
+
+        <p>
+            © 2026 Refúgio das Palmeiras. 
+        </p>
+
+        <span>Seu descanso, nossa essência.</span>
+
+    </footer>
+    
+    <script src="JS/script.js"></script>
+
+</body>
+</html>

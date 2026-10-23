@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --verde: #5f7045;
+    --verde-escuro: #465537;
+    --azul: #073568;
+    --texto: #333a32;
+    --texto-suave: #73776f;
+    --fundo: #f7f7f2;
+    --borda: #e5e5df;
+    --branco: #ffffff;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--texto);
+    background: var(--fundo);
+}
+
+header {
+    width: 100%;
+    min-height: 85px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: var(--verde);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 280px;
+    max-height: 350px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    color: #c5d0a6;
+}
+
+a {
+    text-decoration: none;
+}
+
+.acomodacoes {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 65px 5%;
+}
+
+/* Introdução */
+
+.intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.subtitulo {
+    color: var(--verde);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.intro h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 46px);
+    font-weight: 600;
+    margin: 14px 0;
+}
+
+.intro p {
+    color: var(--texto-suave);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Grade de acomodações */
+
+.lista-quartos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+
+/* Cartões */
+
+.quarto {
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.quarto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* Imagens */
+
+.imagem-quarto {
+    width: 100%;
+    height: 230px;
+    position: relative;
+    overflow: hidden;
+}
+
+.imagem-quarto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.quarto:hover .imagem-quarto img {
+    transform: scale(1.04);
+}
+
+.etiqueta {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--verde-escuro);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 7px 12px;
+    border-radius: 30px;
+}
+
+/* Conteúdo */
+
+.conteudo-quarto {
+    padding: 20px 18px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.detalhes {
+    color: var(--verde);
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 13px;
+    align-self: flex-start;
+}
+
+.detalhes:hover {
+    text-decoration: underline;
+}
+
+.conteudo-quarto h2 {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 9px;
+}
+
+.descricao {
+    color: var(--texto-suave);
+    font-size: 13px;
+    line-height: 1.7;
+    min-height: 66px;
+    margin-bottom: 16px;
+}
+
+/* Comodidades */
+
+.comodidades {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 8px;
+    margin-bottom: 22px;
+}
+
+.comodidades li {
+    font-size: 12px;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+}
+
+.comodidades li::before {
+    content: "✓";
+    color: var(--verde);
+    font-weight: 700;
+}
+
+/* Faixa de reserva */
+
+.reserva {
+    background: var(--verde-escuro);
+    color: var(--branco);
+    border-radius: 5px;
+    padding: 13px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+.reserva h3 {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.reserva p {
+    font-size: 10px;
+    line-height: 1.4;
+    color: #e3eaf3;
+}
+
+.preco {
+    font-size: 25px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Botão */
+
+.botao-secundario {
+    min-height: 48px;
+    border: 1px solid var(--azul);
+    border-radius: 5px;
+    color: var(--azul);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.3s ease,
+                color 0.3s ease;
+}
+
+.botao-secundario:hover {
+    background: var(--azul);
+    color: var(--branco);
+}
+
+/* Seção de contato */
+
+.contato {
+    text-align: center;
+    margin-top: 65px;
+    padding: 45px 20px;
+    background: #ecefe5;
+    border-radius: 10px;
+}
+
+.contato h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.contato p {
+    color: var(--texto-suave);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.botao-principal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 25px;
+    border-radius: 5px;
+    background: var(--verde);
+    color: var(--branco);
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.botao-principal:hover {
+    background: var(--verde-escuro);
+}
+

@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
+:root{
+    --cor-principal:#687B4B;
+    --cor-secundaria: #E5D4B5;
+    
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    background-color: #f7f5ef;
+    color: #294332;
+}
+
+/* Cabeçalho */
+
+.header {
+    width: 100%;
+    min-height: 85px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: var(--cor-principal);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 280px;
+    max-height: 350px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    color: #c5d0a6;
+}
+
+/* Introdução */
+
+.galeria {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 75px 30px 90px;
+}
+
+.introducao {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.subtitulo {
+    color: #78865d;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.introducao h1 {
+    margin: 15px 0;
+    font-size: clamp(36px, 5vw, 54px);
+    font-weight: 500;
+}
+
+.introducao p {
+    color: #74776f;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Filtros */
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.filtros a {
+    padding: 10px 20px;
+    border: 1px solid #d9ded2;
+    border-radius: 30px;
+    color: #294332;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.filtros a:hover {
+    background-color: #687b50;
+    border-color: #687b50;
+    color: white;
+}
+
+/* Grade de fotos */
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: 260px;
+    gap: 22px;
+}
+
+.foto {
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    background-color: #dfe3d8;
+    isolation: isolate;
+}
+
+.foto-destaque {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.foto img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.foto::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(20, 35, 25, 0.8),
+        transparent 65%
+    );
+    pointer-events: none;
+}
+
+.foto:hover img {
+    transform: scale(1.06);
+}
+
+.foto figcaption {
+    position: absolute;
+    z-index: 1;
+    left: 22px;
+    right: 15px;
+    bottom: 22px;
+    color: white;
+}
+
+.foto figcaption span {
+    display: block;
+    margin-bottom: 7px;
+    color: #d9e0c9;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.foto figcaption h2 {
+    font-size: 19px;
+    font-weight: 500;
+}
+
+/* Rodapé */
+
+.footer {
+    padding: 25px 20px;
+    background-color: #294332;
+    color: #e9ede3;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* Responsividade */
+
+@media (max-width: 850px) {
+    .header {
+        padding: 20px 5%;
+        flex-direction: column;
+    }
+
+    .menu {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px 20px;
+    }
+
+    .grid-galeria {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: 230px;
+    }
+
+    .foto-destaque {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+}
+
+@media (max-width: 550px) {
+    .galeria {
+        padding: 50px 18px;
+    }
+
+    .grid-galeria {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 260px;
+    }
+
+    .foto-destaque {
+        grid-column: span 1;
+    }
+
+    .logo {
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+}
